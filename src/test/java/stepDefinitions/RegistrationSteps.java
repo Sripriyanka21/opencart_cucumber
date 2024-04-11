@@ -23,12 +23,12 @@ public class RegistrationSteps {
      AccountRegistrationPage regpage;
      
 	@Given("the user navigates to Register Account page")
-	public void user_navigates_to_register_account_page() {
+	public void user_navigates_to_register_account_page() throws InterruptedException {
 	
-		hp=new HomePage(BaseClass.getDriver());
+	hp=new HomePage(BaseClass.getDriver());
     	hp.clickMyAccount();
         hp.clickRegister();
-                   
+        Thread.sleep(5000);           
 	}
 
 	@When("the user enters the details into below fields")
