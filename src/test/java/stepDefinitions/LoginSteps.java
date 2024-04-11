@@ -25,14 +25,14 @@ public class LoginSteps {
      
    
     @Given("the user navigates to login page")
-    public void user_navigate_to_login_page() {
+    public void user_navigate_to_login_page() throws InterruptedException {
     	
     	BaseClass.getLogger().info("Goto my account-->Click on Login.. ");
     	hp=new HomePage(BaseClass.getDriver());
     	
     	hp.clickMyAccount();
     	hp.clickLogin();
-                   
+        Thread.sleep(5000);           
     }
 
  
